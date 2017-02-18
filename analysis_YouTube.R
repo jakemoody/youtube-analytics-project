@@ -104,7 +104,7 @@ means_host$Mean <- means_host$ViewCount[,1]
 means_host$SE <- means_host$ViewCount[,2]
 means_host$ViewCount <- NULL
 # Plot
-ggplot(means_host, aes(x = reorder(Host, -Mean), y = Mean)) + geom_bar(position=position_dodge(), stat="identity", fill="#FF9999", colour="black") + theme(axis.text.x =element_text(angle =90, hjust=1)) + ylab("Mean Views per Video") + xlab("Category") + geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE), width=.2, position=position_dodge(.9))
+ggplot(means_host, aes(x = reorder(Host, -Mean), y = Mean)) + geom_bar(position=position_dodge(), stat="identity", fill="#FF9999", colour="black") + theme(axis.text.x =element_text(angle =90, hjust=1)) + ylab("Mean Views per Video") + xlab("Host") + geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE), width=.2, position=position_dodge(.9))
 
 # ViewCount by MusicGuest
 means_musical <- aggregate(ViewCount ~ MusicGuest, recent_vids, function(x) c(M = mean(x), SE = sd(x)/sqrt(length(x))))
@@ -112,7 +112,7 @@ means_musical$Mean <- means_musical$ViewCount[,1]
 means_musical$SE <- means_musical$ViewCount[,2]
 means_musical$ViewCount <- NULL
 # Plot
-ggplot(means_musical, aes(x = reorder(MusicGuest, -Mean), y = Mean)) + geom_bar(position=position_dodge(), stat="identity", fill="#FF9999", colour="black") + theme(axis.text.x =element_text(angle =90, hjust=1)) + ylab("Mean Views per Video") + xlab("Category") + geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE), width=.2, position=position_dodge(.9))
+ggplot(means_musical, aes(x = reorder(MusicGuest, -Mean), y = Mean)) + geom_bar(position=position_dodge(), stat="identity", fill="#FF9999", colour="black") + theme(axis.text.x =element_text(angle =90, hjust=1)) + ylab("Mean Views per Video") + xlab("Musical Guest") + geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE), width=.2, position=position_dodge(.9))
 
 # ViewCount by Campaign
 means_campaign <- aggregate(ViewCount ~ Campaign, recent_vids, function(x) c(M = mean(x), SE = sd(x)/sqrt(length(x))))
