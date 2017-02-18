@@ -7,5 +7,7 @@ This repo has some fun with data from Saturday Night Live's public YouTube Chann
   - How does the host impact video count? 
   - How does the musical gues impact video count? 
   - If the video was about the 2016 Electio, was there an effect? 
+  
+  
 
 
