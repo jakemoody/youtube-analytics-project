@@ -9,5 +9,5 @@ This repo has some fun with data from Saturday Night Live's public YouTube Chann
   - If the video was about the 2016 Electio, was there an effect? 
  
   
-![Alt text](/Desktop/rplot.png?raw=true "Optional Title")
+![rplot](https://cloud.githubusercontent.com/assets/16357123/23097182/9f7ac28a-f5fb-11e6-9dd9-56f39e1249d5.png)
 
